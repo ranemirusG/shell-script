@@ -1,0 +1,96 @@
+#USEFULL SHELL COMMANDS
+
+# cat all files from folder and subdfolder?
+# https://stackoverflow.com/questions/62754494/how-do-i-fix-pasting-unicode-characters-in-vim-from-system-clipboard-on-osx
+find . -type f -exec cat {} +
+
+# borrar todo excepto el archivo 'file'
+find . \! -name 'file' -delete  
+
+# para ver info de un archivo
+stat -x file 
+
+pkill -f [pattern] ---> por ejemplo: pkill -f Chrome
+cerrar procesos que coincidan con el pattern
+
+diskutil eject /Volumes/Kindle 
+
+mdfind = por ejemplo buscar palabras en archivos (se puede hacer tambien con Spotlight)
+
+Redirect Output (>); Redirect Input (<) el output/input es un archivo
+read command: se usa para input
+
+#BINDINGS (ver su relacion con imacs)
+
+control+shift+space = select text
+command+shift+a = select last output
+command + shift + v = paste selected text
+
+
+
+#NOTES
+"Trabajar con la línea de comandos siempre te hará más libre, porque evitas depender de terceros programas"
+
+A shell is a program that lets you type instructions into the computer, much like the Terminal (el FINDER es un shell)
+SHORCUTS
+control+u = cut (not to pb) line backward / control+y= paste what was deleted with "contolr+u"
+control+k = cut (not to pb) line forward / control+y= paste what was deleted with "contolr+k"
+control+w = cut by word (backwards)  (not to pb) / control+y= paste what was deleted with "contolr+w"
+
+
+
+macOS Directory Structure
+
+hierarchy / path (en minúsculas): a location within the hierarchy of directories
+PATH (en Mayúsculas): refers to a speacial variable your shell uses that contains a list of all the default locations in which a shell can look for programs
+PATH (by default):
+/bin ---> acá están las built-in shells (bash, csh, dash, ksh, sh, tcsh y zsh)
+/sbin ---> "superuser" (root)
+/usr/bin ---> acá están los intérpretes para los scripting languages incluídos
+/usr/local/bin ---> general system-wide binaries
+/usr/sbin ---> "superuser" (root)
+
+
+ssh ---> Log in another computer
+
+
+"/System/Library is mainly for OS-level stuff. You'll probably see that the largest things in there are caches, frameworks, and other core OS stuff. This is pretty much the place OS X puts its stuff.
+/Library is for all-users content. Things installed for all users to use. So anything you install that can be used by all accounts on the system goes there.
+~/Library is for your content (it's in your home (~)). This is for user-specific caches, preferences, application data. Each user has their own, since each user has their own home directory."
+
+# SCRIPTS
+
+Shell Scripts: a special kind of program you can create yo automate a sequence of tasks
+---> #! shebang line or interpreter line
+
+
+
+PERMISIONS
+chmod
+read permission = r
+write permission = w
+execute permission = x
+
+The only slightly tricky thing about running scripts—and the step people forget most often—is adding execute (run) permission to the file. (I say more about this later, in Understand Permission Basics.)
+To do this, enter:
+chmod u+x test.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
